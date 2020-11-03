@@ -6,7 +6,31 @@
              mc:Ignorable="d"
              x:Class="BarberApp.Vistas.MasterHomeDetail"
              Title="Detail">
-  <StackLayout Padding="10">
-    <Label Text="This is a detail page. To get the 'triple' line icon on each platform add a icon to each platform and update the 'Master' page with an Icon that references it."/>
-  </StackLayout>
+ 
+    <AbsoluteLayout>
+
+        <StackLayout>
+            <ListView x:Name="ListFotos">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Image Source="{Binding Source}" 
+                                   Aspect="AspectFit"
+                                   Margin="5"/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        <Frame BackgroundColor="CadetBlue" CornerRadius="30" HasShadow="True"
+              AbsoluteLayout.LayoutFlags="PositionProportional"
+              AbsoluteLayout.LayoutBounds="1,1,-1,-1" Margin="10">
+            <Label Text="Ok" TextColor="White" FontSize="Medium" FontAttributes="Bold"/>
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+            </Frame.GestureRecognizers>
+
+        </Frame>
+        
+    </AbsoluteLayout>
 </ContentPage>

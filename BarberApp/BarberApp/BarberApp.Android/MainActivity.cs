@@ -29,5 +29,6 @@ namespace BarberApp.Droid
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+
     }
 }
