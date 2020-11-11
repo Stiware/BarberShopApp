@@ -6,6 +6,6 @@
              mc:Ignorable="d"
              x:Class="BarberApp.App">
     <Application.Resources>
-
+        <StyleSheet Source="/NewFolder/Style.css"/>
     </Application.Resources>
 </Application>

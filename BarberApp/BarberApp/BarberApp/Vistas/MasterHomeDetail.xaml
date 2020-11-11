@@ -22,6 +22,9 @@
                 </ListView.ItemTemplate>
             </ListView>
         </StackLayout>
+        
+        
+        
         <Frame BackgroundColor="CadetBlue" CornerRadius="30" HasShadow="True"
               AbsoluteLayout.LayoutFlags="PositionProportional"
               AbsoluteLayout.LayoutBounds="1,1,-1,-1" Margin="10">

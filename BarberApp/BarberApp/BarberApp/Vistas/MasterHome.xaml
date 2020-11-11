@@ -13,6 +13,7 @@
     <NavigationPage>
       <x:Arguments>
         <pages:MasterHomeDetail />
+          
       </x:Arguments>
     </NavigationPage>
   </MasterDetailPage.Detail>

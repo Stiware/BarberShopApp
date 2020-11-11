@@ -5,29 +5,28 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="BarberApp.Vistas.Registrar">
-    <ContentPage.Content>
-        <StackLayout>
-            <StackLayout>
-                <Label Text="Página que registra"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
 
-                <StackLayout>
-                    <Entry x:Name="txtNombre" Placeholder="Nombre completo"/>
-                    <Entry x:Name="txtUsuario" Placeholder="Usuario"/>
-                    <Entry x:Name="txtContraseña" Placeholder="Contraseña" IsPassword="True"/>
-                    <Entry x:Name="txtConfirContra" Placeholder="Confirmar Contraseña" IsPassword="True"/>
-                    <Label Text="Tipo de usuario"/>
-                    <Picker x:Name="Rol" HorizontalOptions="FillAndExpand" SelectedIndex="0" >
-                        <Picker.Items>
-                            <x:String>Seleccione</x:String>
-                            <x:String>Barbero</x:String>
-                            <x:String>Cliente</x:String>
-                        </Picker.Items>
-                    </Picker>
-                </StackLayout>
-                <Button Text="Registrar" x:Name="btnRegistrar" Clicked="btnRegistrar_Clicked"/>
-            </StackLayout> 
+    <StackLayout  BackgroundColor="White" Spacing="30">
+        <StackLayout Margin="20" BackgroundColor="AliceBlue" Spacing="50">
+            <Label Text="Llena los campos para crear un usuario en nuestra aplicacion"
+                FontSize="Large" Margin="12"/>
+
+            <StackLayout Padding="15">
+                <Entry x:Name="txtNombre" Placeholder="Nombre completo"/>
+                <Entry x:Name="txtUsuario" Placeholder="Usuario"/>
+                <Entry x:Name="txtContraseña" Placeholder="Contraseña" IsPassword="True"/>
+                <Entry x:Name="txtConfirContra" Placeholder="Confirmar Contraseña" IsPassword="True"/>
+                <Label Text="Tipo de usuario"/>
+                <Picker x:Name="Rol" HorizontalOptions="FillAndExpand" SelectedIndex="0" >
+                    <Picker.Items>
+                        <x:String>Seleccione</x:String>
+                        <x:String>Barbero</x:String>
+                        <x:String>Cliente</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+            <Button Text="Registrar" x:Name="btnRegistrar" Clicked="btnRegistrar_Clicked" CornerRadius="40" Margin="10" BackgroundColor="#7373F3"/>
         </StackLayout>
-    </ContentPage.Content>
+    </StackLayout>
+
 </ContentPage>

@@ -5,22 +5,28 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="BarberApp.MainPage">
+   
 
-    <StackLayout>
-        <Label Text="Bienvenido a nuetra Barbería" />
 
-        <StackLayout>
-            <Entry Placeholder="Usuario" HorizontalOptions="CenterAndExpand" x:Name="txtUsuario"/>
-            <Entry Placeholder="Contraseña" IsPassword="True" HorizontalOptions="CenterAndExpand" x:Name="txtContraseña" />
-            <Button Text="INGRESAR" x:Uid="btnIngresar" x:Name="btnIngresar" Clicked="btnIngresar_Clicked" />
+    <StackLayout BackgroundColor="White" Spacing="30"  >
+        
+        <Label Text="Bienvenido a nuestra Barbería" TextColor="Black" FontSize="Small" HorizontalTextAlignment="Center" Margin="20"/>
+        <Image Source="logo.png" />
 
+        <StackLayout Margin="10" BackgroundColor="AliceBlue" Spacing="100" >
+            
+            <StackLayout Padding="10" >
+                <Entry Placeholder="Usuario" HorizontalOptions="CenterAndExpand" x:Name="txtUsuario"/>
+                <Entry Placeholder="Contraseña" IsPassword="True" HorizontalOptions="CenterAndExpand" x:Name="txtContraseña" />
+                <Button Text="INGRESAR" x:Uid="btnIngresar" x:Name="btnIngresar" Clicked="btnIngresar_Clicked"  BackgroundColor="#7373F3" CornerRadius="50"/>
+            </StackLayout>
+
+            <StackLayout Padding="50"  >
+                <Label Text="¿Aún no tienes una cuenta?" HorizontalOptions="Center"/>
+                <Button Text="Registrate" x:Name="btnRegistrar" Clicked="btnRegistrar_Clicked" BackgroundColor="#7373F3" CornerRadius="50" />
+
+            </StackLayout>
         </StackLayout>
-
-        <StackLayout>
-            <Label Text="¿Aún no tienes una cuenta?"/>
-            <Button Text="Registrate" x:Name="btnRegistrar" Clicked="btnRegistrar_Clicked" />
-
-        </StackLayout>
+        
     </StackLayout>
-
 </ContentPage>

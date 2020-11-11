@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BarberApp.Vistas.Agendar"
+             Title="Agendar"
+             BackgroundColor="White">
+    
+    <StackLayout Margin=" 30" BackgroundColor="AliceBlue" Spacing="10">
+            <Label Text="Welcome to Agendar!" FontSize="20" HorizontalOptions="Center" TextColor="Black" Margin="20"/>
+
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition>
+                </RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Image Source="defecto.png"/>
+            <Label Grid.Column="1"
+               Text="Corte Normal"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <CheckBox Grid.Column="1" Color="#7373F3"/>
+            <Image Source="defecto.png" Grid.Row="1"/>
+            <CheckBox Grid.Column="1" Grid.Row="1" Color="#7373F3"/>
+            <Label Grid.Row="1"
+               Grid.Column="1"
+               Text="Barba"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+        </Grid>
+        <Label Text="Dia de la cita"/>
+        <DatePicker />
+        <Button Text="Volver" x:Name="btnVolver" x:Uid="btnVolver" CornerRadius="40" Clicked="btnVolver_Clicked" BackgroundColor="#7373F3" />
+        <Button Text="Guardar" CornerRadius="40" BackgroundColor="#7373F3"/>
+    </StackLayout>
+</ContentPage>

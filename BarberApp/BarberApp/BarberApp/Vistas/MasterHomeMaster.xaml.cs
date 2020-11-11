@@ -25,6 +25,8 @@ namespace BarberApp.Vistas
             ListView = MenuItemsListView;
         }
 
+
+
         class MasterHomeMasterViewModel : INotifyPropertyChanged
         {
             public ObservableCollection<MasterHomeMasterMenuItem> MenuItems { get; set; }
@@ -51,6 +53,27 @@ namespace BarberApp.Vistas
                 PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
             }
             #endregion
+        }
+
+        private async void MenuItemsListView_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            switch (MenuItemsListView.SelectedItem.ToString())
+            {
+                case "Ajustes":
+                   await Navigation.PushModalAsync(new Ajustes());
+                    break;
+                    case "Agendar":
+                   await Navigation.PushModalAsync(new Agendar());
+                    break;
+                    case "Perfil":
+                    await Navigation.PushModalAsync(new Perfil());
+                    break;
+
+                default:
+                  await  DisplayAlert("Bobo", "componenten sin programar", "ok");
+                    break;
+            }
+
         }
     }
 }
