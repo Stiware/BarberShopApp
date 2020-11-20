@@ -23,6 +23,7 @@ namespace BarberApp.Vistas
 
             BindingContext = new MasterHomeMasterViewModel();
             ListView = MenuItemsListView;
+            
         }
 
 

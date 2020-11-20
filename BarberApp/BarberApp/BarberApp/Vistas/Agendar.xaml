@@ -17,13 +17,13 @@
                 <ColumnDefinition />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Image Source="defecto.png"/>
+            <Image Source="cabello.jpg"/>
             <Label Grid.Column="1"
                Text="Corte Normal"
                HorizontalOptions="Center"
                VerticalOptions="Center" />
             <CheckBox Grid.Column="1" Color="#7373F3"/>
-            <Image Source="defecto.png" Grid.Row="1"/>
+            <Image Source="barba.jpg" Grid.Row="1"/>
             <CheckBox Grid.Column="1" Grid.Row="1" Color="#7373F3"/>
             <Label Grid.Row="1"
                Grid.Column="1"
@@ -34,6 +34,6 @@
         <Label Text="Dia de la cita"/>
         <DatePicker />
         <Button Text="Volver" x:Name="btnVolver" x:Uid="btnVolver" CornerRadius="40" Clicked="btnVolver_Clicked" BackgroundColor="#7373F3" />
-        <Button Text="Guardar" CornerRadius="40" BackgroundColor="#7373F3"/>
+        <Button Text="Guardar" CornerRadius="40" BackgroundColor="#7373F3" x:Uid="btnGuardar" Clicked="Button_Clicked"/>
     </StackLayout>
 </ContentPage>

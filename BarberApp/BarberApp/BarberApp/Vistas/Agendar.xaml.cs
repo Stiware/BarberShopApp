@@ -21,5 +21,10 @@ namespace BarberApp.Vistas
         {
             await Navigation.PopModalAsync();
         }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            await DisplayAlert("Gracias","Su cita ha sido programada exitosamente","Ok");
+        }
     }
 }

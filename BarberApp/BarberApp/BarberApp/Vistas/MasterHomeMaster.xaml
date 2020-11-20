@@ -14,15 +14,15 @@
               ItemsSource="{Binding MenuItems}" ItemTapped="MenuItemsListView_ItemTapped">
             <d:ListView.ItemsSource >
                 <x:Array Type="{x:Type x:String}">
-                    <x:String>Perfil</x:String>
+                    <x:String >Perfil</x:String>
                     <x:String>Agendar</x:String>
                     <x:String>Ajustes</x:String>
 
                 </x:Array>
             </d:ListView.ItemsSource>
 
-            <ListView.Header>
-                <Grid BackgroundColor="#03A9F4">
+            <ListView.Header >
+                <Grid BackgroundColor="#7373F3">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="10"/>
                         <ColumnDefinition Width="*"/>
@@ -34,10 +34,14 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="10"/>
                     </Grid.RowDefinitions>
+                <Image Source="defecto.png"   
+                       Grid.Column="1"
+                       Grid.Row="1"
+                       />
                     <Label
-              Grid.Column="1"
-              Grid.Row="2"
-              Text="AppName"
+                    Grid.Column="1"
+                    Grid.Row="2"
+                    Text="User name"
               Style="{DynamicResource SubtitleStyle}"/>
                 </Grid>
             </ListView.Header>

@@ -19,6 +19,7 @@ namespace BarberApp
         {
             InitializeComponent();
             
+            
         }
 
        

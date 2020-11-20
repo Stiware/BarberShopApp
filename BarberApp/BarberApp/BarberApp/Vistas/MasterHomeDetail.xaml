@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="BarberApp.Vistas.MasterHomeDetail"
-             Title="Detail">
+             Title="Inicio">
  
     <AbsoluteLayout>
 
@@ -22,13 +22,14 @@
                 </ListView.ItemTemplate>
             </ListView>
         </StackLayout>
-        
-        
-        
-        <Frame BackgroundColor="CadetBlue" CornerRadius="30" HasShadow="True"
+
+
+
+        <Frame BackgroundColor="#7373F3" CornerRadius="1000" HasShadow="True"
               AbsoluteLayout.LayoutFlags="PositionProportional"
-              AbsoluteLayout.LayoutBounds="1,1,-1,-1" Margin="10">
-            <Label Text="Ok" TextColor="White" FontSize="Medium" FontAttributes="Bold"/>
+              AbsoluteLayout.LayoutBounds="1.5,1.1,-1,-1" Margin="10" Scale="0.3">
+            <Image Source="foto.png" />
+            
             <Frame.GestureRecognizers>
                 <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
             </Frame.GestureRecognizers>

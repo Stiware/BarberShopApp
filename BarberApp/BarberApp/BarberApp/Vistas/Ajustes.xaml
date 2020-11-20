@@ -9,11 +9,11 @@
 
     <AbsoluteLayout>
 
-       
 
 
 
-        <Frame BackgroundColor="Green" CornerRadius="30" HasShadow="True"
+
+        <Frame BackgroundColor="#7373F3" CornerRadius="30" HasShadow="True"
               AbsoluteLayout.LayoutFlags="PositionProportional"
               AbsoluteLayout.LayoutBounds="1,1,-1,-1" Margin="10">
             <Label Text="Ok" TextColor="White" FontSize="Medium" FontAttributes="Bold"/>
