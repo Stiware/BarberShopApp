@@ -64,7 +64,7 @@ namespace BarberApp.Vistas
                    await Navigation.PushModalAsync(new Ajustes());
                     break;
                     case "Agendar":
-                   await Navigation.PushModalAsync(new Agendar());
+                   await Navigation.PushModalAsync(new Barberos());
                     break;
                     case "Perfil":
                     await Navigation.PushModalAsync(new Perfil());

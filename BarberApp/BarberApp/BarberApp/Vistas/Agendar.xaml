@@ -6,7 +6,7 @@
              BackgroundColor="White">
     
     <StackLayout Margin=" 30" BackgroundColor="AliceBlue" Spacing="10">
-            <Label Text="Welcome to Agendar!" FontSize="20" HorizontalOptions="Center" TextColor="Black" Margin="20"/>
+            <Label Text="Agendar Tu cita!" FontSize="20" HorizontalOptions="Center" TextColor="Black" Margin="20"/>
 
         <Grid >
             <Grid.RowDefinitions>

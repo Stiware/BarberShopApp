@@ -7,21 +7,15 @@
              x:Class="BarberApp.Vistas.Ajustes"
              Title="Inicio">
 
-    <AbsoluteLayout>
-
-
-
-
-
+    <StackLayout>
         <Frame BackgroundColor="#7373F3" CornerRadius="30" HasShadow="True"
               AbsoluteLayout.LayoutFlags="PositionProportional"
               AbsoluteLayout.LayoutBounds="1,1,-1,-1" Margin="10">
-            <Label Text="Ok" TextColor="White" FontSize="Medium" FontAttributes="Bold"/>
+            <Label Text="Salir" TextColor="White" FontSize="Medium" FontAttributes="Bold"/>
             <Frame.GestureRecognizers>
-                <TapGestureRecognizer />
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
             </Frame.GestureRecognizers>
 
         </Frame>
-
-    </AbsoluteLayout>
-</ContentPage>
+    </StackLayout>
+  </ContentPage>

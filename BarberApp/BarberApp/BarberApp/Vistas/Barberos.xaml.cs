@@ -10,19 +10,22 @@ using Xamarin.Forms.Xaml;
 namespace BarberApp.Vistas
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Ajustes : ContentPage
+    public partial class Barberos : ContentPage
     {
-        public Ajustes()
+        public Barberos()
         {
             InitializeComponent();
         }
 
-        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
-        {
 
-            
-            Navigation.PopModalAsync(true);
-            
+        private  void Button_Clicked_1(object sender, EventArgs e)
+        {
+             Navigation.PushModalAsync(new Agendar());
+        }
+
+        private  void Button_Clicked(object sender, EventArgs e)
+        {
+             Navigation.PopModalAsync();
         }
     }
 }

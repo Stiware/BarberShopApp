@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BarberApp.Vistas.Barberos">
+    <StackLayout Spacing="5" Margin="50" HorizontalOptions="Center">
+
+
+        <Button  Clicked="Button_Clicked_1"  ImageSource="defecto.png" />
+        <Label Text="Nombre: Carlos santana" />
+        <Label  Text="Edad: 39" />
+        <Button  Clicked="Button_Clicked_1"  ImageSource="defecto.png" />
+        <Label Text="Nombre: Hemilio Escobar" />
+        <Label  Text="Edad: 28" />
+
+        <Button Text="Atras" BackgroundColor="#7373F3" CornerRadius="100" Clicked="Button_Clicked"></Button>
+
+    </StackLayout>
+
+</ContentPage>

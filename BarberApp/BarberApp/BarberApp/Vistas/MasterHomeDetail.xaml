@@ -9,20 +9,13 @@
  
     <AbsoluteLayout>
 
-        <StackLayout>
-            <ListView x:Name="ListFotos">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Image Source="{Binding Source}" 
-                                   Aspect="AspectFit"
-                                   Margin="5"/>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </StackLayout>
+        <Label
+            HorizontalOptions="Center"
+            Text="Welcome to Xamarin.Forms!"
+            VerticalOptions="CenterAndExpand" />
+        <Image x:Name="image" Source="" />
 
+        <Button Text="tomar" Clicked="TapGestureRecognizer_Tapped"></Button>
 
 
         <Frame BackgroundColor="#7373F3" CornerRadius="1000" HasShadow="True"

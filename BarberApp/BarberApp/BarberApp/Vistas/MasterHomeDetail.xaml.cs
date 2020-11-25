@@ -26,9 +26,9 @@ namespace BarberApp.Vistas
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             //Escala pequeña
-            await ((Frame)sender).ScaleTo(0.8, length: 50, Easing.Linear);
+            //await ((Frame)sender).ScaleTo(0.8, length: 50, Easing.Linear);
             //Esacala normal
-            await ((Frame)sender).ScaleTo(1, length: 50, Easing.Linear);
+            //await ((Frame)sender).ScaleTo(1, length: 50, Easing.Linear);
 
             var initialize = await CrossMedia.Current.Initialize();
 
@@ -38,38 +38,32 @@ namespace BarberApp.Vistas
                 return;
             }
 
-            var newPhotoId = Guid.NewGuid();
+            await CrossMedia.Current.Initialize();
 
-
-            using (var photo = await CrossMedia.Current.TakePhotoAsync(
-                new StoreCameraMediaOptions()
-                {
-                    Name = newPhotoId.ToString(),
-                    SaveToAlbum = true,
-                    DefaultCamera = CameraDevice.Rear,
-                    Directory = "DemoCamera",
-                    RotateImage = true,
-                    CustomPhotoSize = 50
-
-                }))
+            if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
             {
-                if (string.IsNullOrWhiteSpace(photo?.Path))
-                {
-                    return;
-                }
-            
-                var newPhotoMedia = new mediaModels()
-                {
-                    MediaId = newPhotoId,
-                    Path = photo.Path,
-                    LocalDateTime = DateTime.Now
-
-                };
-                Photos.Add(newPhotoMedia);
-
-                photo.Dispose();
-
+                await DisplayAlert("No Camera", ":( No camera available.", "OK");
+                return;
             }
+
+            var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions
+            {
+                Directory = "Sample",
+                Name = "test.jpg"
+            });
+
+            if (file == null)
+                return;
+
+            await DisplayAlert("File Location", file.Path, "OK");
+
+            image.Source = ImageSource.FromStream(() =>
+            {
+                var stream = file.GetStream();
+                return stream;
+            });
+
         }
+        
     }
 }
